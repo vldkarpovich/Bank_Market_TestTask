@@ -1,0 +1,14 @@
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\bin\Debug\net6.0\Bank.EFModels.deps.json
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\bin\Debug\net6.0\Bank.EFModels.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\bin\Debug\net6.0\Bank.EFModels.pdb
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.csproj.AssemblyReference.cache
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.AssemblyInfoInputs.cache
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.AssemblyInfo.cs
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.csproj.CoreCompileInputs.cache
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\refint\Bank.EFModels.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.pdb
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\ref\Bank.EFModels.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\bin\Debug\net6.0\Bank.EFModels.runtimeconfig.json
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.EFModels\obj\Debug\net6.0\Bank.EFModels.genruntimeconfig.cache

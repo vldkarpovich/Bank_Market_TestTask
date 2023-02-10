@@ -1,0 +1,15 @@
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\bin\Debug\net6.0\Bank.DAL.deps.json
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\bin\Debug\net6.0\Bank.DAL.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\bin\Debug\net6.0\Bank.DAL.pdb
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\bin\Debug\net6.0\Bank.EFModels.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\bin\Debug\net6.0\Bank.EFModels.pdb
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.csproj.AssemblyReference.cache
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.AssemblyInfoInputs.cache
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.AssemblyInfo.cs
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.csproj.CoreCompileInputs.cache
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.csproj.CopyComplete
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\refint\Bank.DAL.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\Bank.DAL.pdb
+C:\Users\vladk\source\repos\Bank_Market_TestTask\Bank.DAL\obj\Debug\net6.0\ref\Bank.DAL.dll
