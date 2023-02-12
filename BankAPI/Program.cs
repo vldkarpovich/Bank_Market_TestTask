@@ -1,5 +1,3 @@
-using System;
-using System.Reflection;
 using Bank.API.Middleware;
 using Bank.Application;
 using Bank.Application.Behaviors;

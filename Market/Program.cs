@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Net;
-
-namespace Market
+﻿namespace Market
 {
     internal class Program
     {

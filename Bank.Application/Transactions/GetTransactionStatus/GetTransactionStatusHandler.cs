@@ -7,7 +7,7 @@ using System.Net;
 
 namespace Bank.Application.Operations.GetOperationStatus
 {
-    public class GetTransactionStatusHandler : IRequestHandler<GetTransactionStatusCommand, GetTransactionStatusResponse>
+    public class GetTransactionStatusHandler : IRequestHandler<GetTransactionStatusQuery, GetTransactionStatusResponse>
     {
         private readonly ITransactionSerice _transactionService;
         private readonly IMapper _mapper;
@@ -18,7 +18,7 @@ namespace Bank.Application.Operations.GetOperationStatus
             _mapper = mapper;
         }
 
-        public async Task<GetTransactionStatusResponse> Handle(GetTransactionStatusCommand request, CancellationToken cancellationToken)
+        public async Task<GetTransactionStatusResponse> Handle(GetTransactionStatusQuery request, CancellationToken cancellationToken)
         {
             var result = await _transactionService.GetTransactionById(request.id);
 

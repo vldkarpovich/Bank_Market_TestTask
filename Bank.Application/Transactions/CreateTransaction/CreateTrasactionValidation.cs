@@ -1,8 +1,10 @@
-﻿
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Bank.Application.Transactions.CreateTransaction
 {
+    /// <summary>
+    /// Credit cad validation rule
+    /// </summary>
     public class CreateTransactionValidation : AbstractValidator<CreateTransactionCommand>
     {
         public CreateTransactionValidation() 

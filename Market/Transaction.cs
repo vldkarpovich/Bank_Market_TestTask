@@ -1,5 +1,4 @@
-﻿
-namespace Market
+﻿namespace Market
 {
     public class Transaction
     {

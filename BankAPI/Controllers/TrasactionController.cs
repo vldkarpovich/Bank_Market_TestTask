@@ -1,10 +1,7 @@
 using Bank.API.Controllers.Base;
 using Bank.Application.Transactions.CreateTransaction;
 using Bank.Application.Transactions.GetTransactionStatus;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace BankAPI.Controllers
 {
@@ -12,17 +9,10 @@ namespace BankAPI.Controllers
     [Route("api")]
     public class TransactionController : BaseController
     {
-        private readonly ILogger<TransactionController> _logger;
-
-        public TransactionController(ILogger<TransactionController> logger)
-        {
-            _logger = logger;
-        }
-
         [HttpGet("get-status")]
         public async Task<ActionResult<GetTransactionStatusResponse>> GetTransactions([FromQuery] Guid id)
         {
-            var query = new GetTransactionStatusCommand(id);
+            var query = new GetTransactionStatusQuery(id);
             return await Mediator.Send(query);
         }
 

@@ -1,12 +1,6 @@
-﻿
-using Bank.EFModels.Models.Enums;
+﻿using Bank.EFModels.Models.Enums;
 
-namespace Bank.DAL.Views
-{
-    public class GetTransactionResponseView
-    {
-        public TransactionStatus TransactionStatus { get; set; }       
-    }
-}
+namespace Bank.DAL.Views;
+    public record GetTransactionResponseView(TransactionStatus TransactionStatus);
 
 

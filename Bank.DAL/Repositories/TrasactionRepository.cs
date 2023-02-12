@@ -4,7 +4,6 @@ using Bank.EFModels;
 using Bank.EFModels.Models.Transactions;
 using Microsoft.Extensions.Logging;
 
-
 namespace Bank.DAL.Repositories
 {
     public class TransactionRepository : BaseKeyRepository<TransactionRepository, Transaction>, ITransactionRepository
@@ -14,7 +13,6 @@ namespace Bank.DAL.Repositories
         {
 
         }
-
 
         public async Task<Transaction> UpdateTransactionStatus(Transaction transaction)
         {
