@@ -97,3 +97,6 @@ C:\Users\vladk\source\repos\Bank_Market_TestTask\BankAPI\bin\Debug\net6.0\runtim
 C:\Users\vladk\source\repos\Bank_Market_TestTask\BankAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\vladk\source\repos\Bank_Market_TestTask\BankAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\vladk\source\repos\Bank_Market_TestTask\BankAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\BankAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\BankAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\vladk\source\repos\Bank_Market_TestTask\BankAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll

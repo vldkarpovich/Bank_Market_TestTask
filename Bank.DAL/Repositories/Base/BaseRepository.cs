@@ -38,22 +38,6 @@ namespace Bank.DAL.Repositories.Base
             }
         }
 
-        public virtual void Update(T input)
-        {
-            try
-            {
-                if (input == null)
-                    throw new ArgumentNullException("input can not be null");
-
-                var result = _context.Update(input);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError("Could not update entity for set " + typeof(T).ToString() + ": " + e.ToString());
-                throw;
-            }
-        }
-
         public async Task<int> SaveChangesAsync()
         {
             try

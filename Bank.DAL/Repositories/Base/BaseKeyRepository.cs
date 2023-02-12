@@ -21,20 +21,18 @@ namespace Bank.DAL.Repositories.Base
         {
         }
 
-        public virtual async Task<T> GetByIdAsync(Guid id, Func<IQueryable<T>, IQueryable<T>> include = null)
+        public virtual async Task<T> GetByIdAsync(Guid id)
         {
             try
             {
                 if (id == Guid.Empty)
                     throw new ArgumentNullException("Id for input can not be empty");
 
-                IQueryable<T> queryWithInclude = include?.Invoke(_set) ?? _set.AsQueryable();
-
-                return await queryWithInclude.Where(c => c.Id.Equals(id))?.AsNoTracking().FirstOrDefaultAsync();
+                return await _set.FirstAsync(c => c.Id == id);
             }
             catch (Exception e)
             {
-                _logger.LogError("Could not fetch by id for set " + typeof(T).ToString() + ": " + e.ToString());
+                _logger.LogError("Could not fetch by id " + typeof(T).ToString() + ": " + e.ToString());
                 throw;
             }
         }

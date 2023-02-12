@@ -16,8 +16,7 @@ namespace Bank.DAL.Contracts
         /// Gets the entity with the given ID
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="include">You can use the Include parameter to specify related data to be included in query results</param>
         /// <returns></returns>
-        Task<T> GetByIdAsync(Guid id, Func<IQueryable<T>, IQueryable<T>> include = null);
+        Task<T> GetByIdAsync(Guid id);
     }
 }

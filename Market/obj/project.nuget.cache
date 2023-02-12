@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "10039M7i+dJ6PloXYuFXHma367HO3jrSs+1WDbMh2c+Tko+YlgZXe4LT1G2fJcyMTjLEWoHU1Q0JVxBDh1AHjA==",
+  "dgSpecHash": "CG6ZZPYZ7IVpunOoLd8h7YJcBJndsMujClYAjbbMgCQrI7T2DnnCDCWpwcGb2Taf94kNNPiZLVxgDtaBPJ5sbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\vladk\\source\\repos\\Bank_Market_TestTask\\Market\\Market.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vladk\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

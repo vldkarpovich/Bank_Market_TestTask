@@ -20,14 +20,6 @@ namespace Bank.DAL.Contracts
         Task<T> AddAsync(T input);
 
         /// <summary>
-        /// Marks the entity to be updated.
-        /// SaveChangesAsync() needs to be called before it is persisted.
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        void Update(T input);
-
-        /// <summary>
         /// Saves all the changes
         /// </summary>
         /// <returns></returns>

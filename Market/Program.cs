@@ -1,20 +1,21 @@
-﻿namespace Market
+﻿using Newtonsoft.Json;
+using System.Net;
+
+namespace Market
 {
     internal class Program
     {
         static async Task Main(string[] args)
         {
             var transactionWorker = new TransactionWorker();
+            Console.WriteLine("Market start work");
+            Console.WriteLine("Please press Enter if you want buy samething or prees another key if want exit");
 
-            int num = 0;
-            // устанавливаем метод обратного вызова
-            TimerCallback tm = new TimerCallback();
-            // создаем таймер
-            Timer timer = new Timer(tm, num, 0, 2000);
-
-            var result = await transactionWorker.SendtransactionAsync();
-            Console.WriteLine(result);
-            Console.ReadLine();
+            while (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                await transactionWorker.SendtransactionAsync();
+                Console.WriteLine("Please press Enter if you want buy samething again or prees another key if want exit");
+            }
         }
     }
 }

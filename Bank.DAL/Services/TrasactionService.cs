@@ -2,20 +2,25 @@
 using Bank.DAL.Interfaces.Repositories;
 using Bank.DAL.Interfaces.Services;
 using Bank.DAL.Views;
+using Bank.EFModels;
 using Bank.EFModels.Models.Enums;
 using Bank.EFModels.Models.Transactions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Bank.DAL.Services
 {
-    public class TransactionSerice : ITransactionSerice
+    public class TransactionService : ITransactionSerice
     {
+        private readonly IServiceProvider _serviceProvider;
         private readonly ITransactionRepository _transactionRepository;
         private readonly IMapper _mapper;
 
-        public TransactionSerice(ITransactionRepository transactionRepository, IMapper mapper)
+        public TransactionService(ITransactionRepository transactionRepository, IMapper mapper, IServiceProvider serviceProvider)
         {
-            _transactionRepository= transactionRepository;
+            _transactionRepository = transactionRepository;
             _mapper = mapper;
+            _serviceProvider = serviceProvider;
         }
 
         public async Task<GetTransactionResponseView> GetTransactionById(Guid id)
@@ -35,42 +40,24 @@ namespace Bank.DAL.Services
             await _transactionRepository.AddAsync(transaction);
             await _transactionRepository.SaveChangesAsync();
 
-            //ChangeTransactionStatus(transaction);
+            ChangeTransactionStatus(transaction);
 
             return _mapper.Map<CreateTransactionResponseView>(transaction);
         }
 
-        public async void ChangeTransactionStatus(Transaction transaction)
+        public async Task ChangeTransactionStatus(Transaction transaction)
         {
-            await Task.Delay(10000);
+            var scope = _serviceProvider.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<ITransactionRepository>();
+
+            await Task.Delay(5000);
+            
             if (transaction.Sum >= 1000)
                 transaction.TransactionStatus = TransactionStatus.Accept;
             else
                 transaction.TransactionStatus = TransactionStatus.Fail;
 
-            await _transactionRepository.UpdateTransactionByIdAsync(transaction);
-
-            //await Task.WhenAny(
-            //_orderRepository.UpdateTransactionByIdAsync(transaction),
-            //Task.Delay(TimeSpan.FromSeconds(10)));
-
-            //Task task = Task.Run(() =>
-            //{
-            //    var biba = new Transaction { Id = id, CardNumber = transaction.CardNumber, 
-            //        Sum = transaction.Sum, TransactionStatus = transaction.TransactionStatus, 
-            //        CreatedDate = transaction.CreatedDate };
-
-            //    if (biba.Sum >= 1000)
-            //        transaction.TransactionStatus = TransactionStatus.Accept;
-            //    else
-            //        transaction.TransactionStatus = TransactionStatus.Fail;
-
-            //    Thread.Sleep(10000);     // задержка на 4 секунды - имитация долгой работы
-
-            //    _orderRepository.Update(transaction);
-            //    _orderRepository.SaveChangesAsync();
-            //});
-            //task.Wait();
+            await db.UpdateTransactionStatus(transaction);
         }
     }
 }

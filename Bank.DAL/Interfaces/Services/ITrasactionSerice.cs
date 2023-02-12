@@ -7,7 +7,7 @@ namespace Bank.DAL.Interfaces.Services
     {
         public Task<GetTransactionResponseView> GetTransactionById(Guid id);
         public Task<CreateTransactionResponseView> CreateTransaction(CreateTransactionRequestView request);
-        public void ChangeTransactionStatus(Transaction transaction);
+        public Task ChangeTransactionStatus(Transaction transaction);
         
     }
 }

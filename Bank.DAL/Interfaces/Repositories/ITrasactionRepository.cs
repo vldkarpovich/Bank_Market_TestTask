@@ -5,7 +5,6 @@ namespace Bank.DAL.Interfaces.Repositories
 {
     public interface ITransactionRepository : IBaseKeyRepository<Transaction>
     {
-        public Task<Transaction> UpdateTransactionByIdAsync(Transaction transaction);
-        //public Task<Transaction> GetByCardNumberAsync(string cardNumber);
+        public Task<Transaction> UpdateTransactionStatus(Transaction transaction);
     }
 }

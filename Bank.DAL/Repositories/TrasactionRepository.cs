@@ -16,12 +16,10 @@ namespace Bank.DAL.Repositories
         }
 
 
-        public async Task<Transaction> UpdateTransactionByIdAsync(Transaction transaction)
+        public async Task<Transaction> UpdateTransactionStatus(Transaction transaction)
         {
             try
             {
-                //var transaction = _context.Transactions.First(c => c.Id == id);
-
                 if (transaction == null)
                     throw new ArgumentNullException("transaction cannot be null");
 
@@ -35,21 +33,5 @@ namespace Bank.DAL.Repositories
                 throw;
             }
         }
-
-        //public async Task<Transaction> GetByCardNumberAsync(string cardNumber)
-        //{
-        //    try
-        //    {
-        //        if (cardNumber == null)
-        //            throw new ArgumentNullException("Credit card number for input can not be null");
-
-        //        return await _context.Transactions.FindAsync(cardNumber);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        _logger.LogError("Could not fetch by id for set " + typeof(Transaction).ToString() + ": " + e.ToString());
-        //        throw;
-        //    }
-        //}
     }
 }
