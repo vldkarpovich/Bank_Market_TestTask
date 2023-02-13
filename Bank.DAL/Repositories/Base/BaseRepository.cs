@@ -33,7 +33,7 @@ namespace Bank.DAL.Repositories.Base
             }
             catch (Exception e)
             {
-                _logger.LogError("Could not add for set " + typeof(T).ToString() + ": " + e.ToString());
+                _logger.LogError("Could not add for set {type} : {exception}", typeof(T).ToString(), e.ToString());
                 throw;
             }
         }
@@ -46,7 +46,7 @@ namespace Bank.DAL.Repositories.Base
             }
             catch (Exception e)
             {
-                _logger.LogError("Could not update changes for set " + typeof(T).ToString() + ": " + e.ToString());
+                _logger.LogError("Could not update changes for set {type} : {exception}", typeof(T).ToString(), e.ToString());
                 throw;
             }
         }

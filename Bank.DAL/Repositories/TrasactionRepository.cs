@@ -1,7 +1,7 @@
 ﻿using Bank.DAL.Interfaces.Repositories;
 using Bank.DAL.Repositories.Base;
 using Bank.EFModels;
-using Bank.EFModels.Models.Transactions;
+using Bank.EFModels.Models;
 using Microsoft.Extensions.Logging;
 
 namespace Bank.DAL.Repositories
@@ -27,7 +27,7 @@ namespace Bank.DAL.Repositories
             }
             catch (Exception e)
             {
-                _logger.LogError("Could not update transaction " + typeof(Transaction).ToString() + ": " + e.ToString());
+                _logger.LogError("Could not update transaction {type} : {exception}", typeof(Transaction).ToString(), e.ToString());
                 throw;
             }
         }

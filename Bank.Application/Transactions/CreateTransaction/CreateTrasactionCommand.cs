@@ -1,4 +1,4 @@
 ﻿using MediatR;
 
 namespace Bank.Application.Transactions.CreateTransaction;
-    public record CreateTransactionCommand(int Sum, string CardNumber) : IRequest<CreateTransactionResponse>;
+    public record CreateTransactionCommand(double Sum, string CardNumber) : IRequest<CreateTransactionResponse>;

@@ -1,5 +1,5 @@
 ﻿using Bank.DAL.Views;
-using Bank.EFModels.Models.Transactions;
+using Bank.EFModels.Models;
 
 namespace Bank.DAL.Interfaces.Services
 {

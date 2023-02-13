@@ -32,7 +32,7 @@ namespace Bank.DAL.Repositories.Base
             }
             catch (Exception e)
             {
-                _logger.LogError("Could not fetch by id " + typeof(T).ToString() + ": " + e.ToString());
+                _logger.LogError("Could not fetch by id {type} : {exception}", typeof(T).ToString(), e.ToString());
                 throw;
             }
         }

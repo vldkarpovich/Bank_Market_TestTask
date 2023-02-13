@@ -3,5 +3,5 @@
 namespace Bank.EFModels.Models.Enums
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum TransactionStatus : int { InProces = 1, Accept = 2, Fail = 3 }
+    public enum TransactionStatus : int { InProcess = 1, Accept = 2, Fail = 3 }
 }

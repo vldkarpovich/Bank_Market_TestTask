@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bank.EFModels.Migrations
 {
     [DbContext(typeof(ApplicationDataContext))]
-    [Migration("20230209224155_initial")]
+    [Migration("20230213113919_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Bank.EFModels.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Bank.EFModels.Models.Transactions.Transaction", b =>
+            modelBuilder.Entity("Bank.EFModels.Models.Transaction", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,15 +38,15 @@ namespace Bank.EFModels.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Sum")
-                        .HasColumnType("int");
+                    b.Property<double>("Sum")
+                        .HasColumnType("float");
 
-                    b.Property<int?>("TransactionStatus")
+                    b.Property<int>("TransactionStatus")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Transactions", (string)null);
+                    b.ToTable("Transactions");
                 });
 #pragma warning restore 612, 618
         }

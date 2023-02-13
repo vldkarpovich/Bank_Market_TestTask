@@ -17,8 +17,8 @@ namespace Bank.EFModels.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CardNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Sum = table.Column<int>(type: "int", nullable: false),
-                    TransactionStatus = table.Column<int>(type: "int", nullable: true),
+                    Sum = table.Column<double>(type: "float", nullable: false),
+                    TransactionStatus = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

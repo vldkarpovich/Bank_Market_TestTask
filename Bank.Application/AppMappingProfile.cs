@@ -2,7 +2,7 @@
 using Bank.Application.Transactions.CreateTransaction;
 using Bank.Application.Transactions.GetTransactionStatus;
 using Bank.DAL.Views;
-using Bank.EFModels.Models.Transactions;
+using Bank.EFModels.Models;
 
 namespace Bank.Application
 {

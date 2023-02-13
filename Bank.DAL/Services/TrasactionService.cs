@@ -3,8 +3,8 @@ using Bank.DAL.Interfaces.Repositories;
 using Bank.DAL.Interfaces.Services;
 using Bank.DAL.Views;
 using Bank.EFModels;
+using Bank.EFModels.Models;
 using Bank.EFModels.Models.Enums;
-using Bank.EFModels.Models.Transactions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -34,7 +34,7 @@ namespace Bank.DAL.Services
         {
             var transaction = _mapper.Map<Transaction>(request);
             transaction.Id = Guid.NewGuid();
-            transaction.TransactionStatus = TransactionStatus.InProces;
+            transaction.TransactionStatus = TransactionStatus.InProcess;
             transaction.CreatedDate = DateTime.Now;
 
             await _transactionRepository.AddAsync(transaction);

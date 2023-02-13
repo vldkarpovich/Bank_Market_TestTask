@@ -15,7 +15,7 @@ namespace Market
             using (var client = new HttpClient(clientHandler))
             {
                 Random rnd = new Random();
-                var transaction = new Transaction() { Sum = rnd.Next(500, 2000), CardNumber = "4569403961014710" };
+                var transaction = new Transaction() { Sum = Math.Round(rnd.NextDouble() * (2000 - 500) + 500,2), CardNumber = "4569403961014710" };
                 Console.WriteLine($"Send transaction, sum = {transaction.Sum.ToString()}");
                 var response = await client.PostAsync("https://localhost:44304/api/create-order", new StringContent(JsonConvert.SerializeObject(transaction), Encoding.UTF8, "application/json"));
                 response.EnsureSuccessStatusCode();
@@ -27,7 +27,7 @@ namespace Market
 
                     Console.WriteLine($"Transaction was sended, transaction status - {result}");
 
-                    while (result == "InProces")
+                    while (result == "InProcess")
                     {
                         Task.Delay(2000).Wait();
                         Console.WriteLine($"Get transaction status");

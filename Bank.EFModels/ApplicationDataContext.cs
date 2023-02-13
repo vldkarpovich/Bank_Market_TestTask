@@ -1,4 +1,4 @@
-﻿using Bank.EFModels.Models.Transactions;
+﻿using Bank.EFModels.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bank.EFModels
@@ -13,7 +13,7 @@ namespace Bank.EFModels
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.CreateTransactionEntity();
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDataContext).Assembly);
         }
     }
 }
