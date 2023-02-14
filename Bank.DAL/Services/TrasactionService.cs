@@ -49,8 +49,8 @@ namespace Bank.DAL.Services
         {
             var scope = _serviceProvider.CreateScope();
             var db = scope.ServiceProvider.GetRequiredService<ITransactionRepository>();
-
-            await Task.Delay(5000);
+            var rnd = new Random();
+            await Task.Delay(rnd.Next(1000,5000));
             
             if (transaction.Sum >= 1000)
                 transaction.TransactionStatus = TransactionStatus.Accept;
