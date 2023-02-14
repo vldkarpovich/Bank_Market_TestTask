@@ -1,10 +1,12 @@
-﻿namespace Market
+﻿using Market.Service;
+
+namespace Market
 {
     internal class Program
     {
         static async Task Main(string[] args)
         {
-            var transactionWorker = new TransactionWorker();
+            var transactionWorker = new TransactionService();
             Console.WriteLine("Market start work");
             Console.WriteLine("Please press Enter if you want buy samething or prees another key if want exit");
 

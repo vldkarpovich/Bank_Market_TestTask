@@ -1,4 +1,4 @@
-﻿namespace Market
+﻿namespace Market.Views
 {
     public class TransactionResponse
     {

@@ -1,4 +1,4 @@
-﻿namespace Market
+﻿namespace Market.Models
 {
     public class Transaction
     {
